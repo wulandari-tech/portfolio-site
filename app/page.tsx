@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Experience from "../components/Experience"
-import educationalExperiences from "../data/educationalExperiences";
+import { notableExperiences, educationalExperiences } from "../data/experiences";
 
 export default function Home() {
   return (
@@ -13,6 +13,12 @@ export default function Home() {
         </p>
         {/* TODO: decide which Image elements should be given the priority tag */}
         <Image src="/headshot.jpeg" alt="" width={50/96*98} height={50} priority/>
+      </section>
+      <section>
+        <h2>Notable Experience...</h2>
+        <ol>
+          {notableExperiences.map((experience, index) => <li key={index}><Experience experience={experience} /></li>)}
+        </ol>
       </section>
       <section>
         <h2>Education...</h2>
