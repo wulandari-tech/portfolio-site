@@ -19,7 +19,7 @@ export default function Home() {
       <section>
         <h2>Education...</h2>
         <ol>
-          {educationalExperiences.map(experience => <Experience experience={experience} />)}
+          {educationalExperiences.map((experience, index) => <li key={index}><Experience experience={experience} /></li>)}
         </ol>
       </section>
     </main>
