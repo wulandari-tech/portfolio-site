@@ -21,6 +21,7 @@ export const notableExperiences: Experience[] = [
         org: 'The Odin Project',
         startYear: 2022,
         endYear: 2023,
+        // TODO: maybe add link to webpage in portfolio site regarding open-source contributions for The Odin Project
         description: 'Learned full-stack development through 30 technically self-guided projects. Improved lesson content and more in a popular, open source full-stack web development curriculum by making pull requests to its GitHub repo: github.com/TheOdinProject/curriculum',
         skills: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'JavaScript ES6+', 'HTML', 'CSS', 'Responsive Design', 'Accessibility', 'REST APIs', 'Jest', 'API Testing (SuperTest)', 'React Testing Library', 'Linux', 'Git', 'VS Code', 'Passport.js', 'PugJS', 'Babel.js', 'Webpack'],
     },
