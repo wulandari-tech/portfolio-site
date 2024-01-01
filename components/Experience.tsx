@@ -21,7 +21,7 @@ export default function Experience({experience}: ExperienceProps) {
             <p>
                 {org}
             </p>
-            {orgSrc && <Image src={orgSrc} alt="" width={50/96*98} height={50} />}
+            {orgSrc && <Image src={orgSrc} alt='' width={50/96*98} height={50} />}
             <p>
                 {dateSpanText}
             </p>
@@ -29,7 +29,7 @@ export default function Experience({experience}: ExperienceProps) {
                 {description}
             </p>
             <p>
-                {skills.join(", ")}
+                {skills.join(', ')}
             </p>
         </div>
     )
