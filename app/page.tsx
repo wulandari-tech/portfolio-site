@@ -4,6 +4,7 @@ import { notableExperiences, educationalExperiences } from "../data/experiences"
 
 export default function Home() {
   return (
+    // TODO: link skills to certifications if you have them
     <main>
       <h1>Welcome to my portfolio site!</h1>
       <section>
