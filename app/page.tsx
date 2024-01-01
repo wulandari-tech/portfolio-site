@@ -16,6 +16,7 @@ export default function Home() {
       </section>
       <section>
         <h2>Notable Experience...</h2>
+        {/* TODO: add URLs taking visitors to an organisation's homepage */}
         <ol>
           {notableExperiences.map((experience, index) => <li key={index}><Experience experience={experience} /></li>)}
         </ol>
