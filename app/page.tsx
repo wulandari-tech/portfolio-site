@@ -31,9 +31,9 @@ export default function Index() {
       <section>
         <h2>Further Knowledge and Skills...</h2>
         {/* TODO: link skills below to projects in which they're used */}
-        <ol>
+        <p>
           {['AWS Identity and Access Management', 'AWS Lambda', 'Amazon DynamoDB', 'Amazon API Gateway', 'AWS Amplify', 'Docker', 'Material-UI', 'Web Scraping (Puppeteer)', 'Data Structures & Algorithms', 'Operating Systems', 'Networking', 'System Design'].join(', ')}
-        </ol>
+        </p>
       </section>
     </main>
   )
