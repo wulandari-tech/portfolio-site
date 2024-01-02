@@ -1,14 +1,5 @@
 // NOTE: this file is temporary and simply to aid in building the frontend before building the backend. Later, project details will be fetched directly from GitHub
-
-interface Project {
-    repoName: string,
-    repoUrl: string,
-    repoDescripion: string,
-    isFeatured: boolean,
-    languagesUsed: string[],
-    lastModified: Date,
-    deploymentURL?: string,
-}
+import { Project } from "@/types";
 
 const projects: Project[] = [
     {
@@ -36,6 +27,7 @@ const projects: Project[] = [
         isFeatured: false,
         languagesUsed: ['JavaScript'],
         lastModified: new Date(2023, 4, 27, 12, 55, 0),
+        deploymentURL: null,
     },
     {
         repoName: 'admin-dashboard',

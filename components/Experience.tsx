@@ -5,8 +5,8 @@ interface ExperienceProps {
     experience: Experience,
 }
 
-export default function Experience({experience}: ExperienceProps) {
-    const {position, org, orgSrc, startYear, endYear, description, skills} = experience;
+export default function Experience({ experience }: ExperienceProps) {
+    const { position, org, orgSrc, startYear, endYear, description, skills } = experience;
     let dateSpanText: string = String(startYear);
     if (!endYear) {
         dateSpanText += ` --`;

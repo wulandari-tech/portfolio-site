@@ -7,3 +7,14 @@ export interface Experience {
     description: string,
     skills: string[],
 }
+
+export interface Project {
+    repoName: string,
+    repoUrl: string,
+    repoDescripion: string | null,
+    isFeatured: boolean,
+    languagesUsed: string[],
+    lastModified: Date,
+    deploymentURL: string | null,
+    projectSrc?: string,
+}
