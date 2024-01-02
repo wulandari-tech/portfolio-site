@@ -1,5 +1,10 @@
 import projects from "../../data/projects";
-import Project from "@/components/Project"
+import ProjectComponent from "@/components/Project"
+import { Project } from "@/types";
+
+function makeFeaturedProjectList(projects: Project[]): Project[] {
+  return projects.filter(project => project.isFeatured).sort((a, b) => b.lastModified.getTime() - a.lastModified.getTime());
+}
 
 export default function Index() {
     return (
@@ -8,7 +13,9 @@ export default function Index() {
         <h1>My Projects...</h1>
         <section>
             <h2>Featured...</h2>
-            {/* <Project project={projects[0]}/> */}
+            <ol>
+              {makeFeaturedProjectList(projects).map(project => <ProjectComponent project={project}/>)}
+            </ol>
         </section>
         <section>
             <h2>More...</h2>
