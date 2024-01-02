@@ -2,8 +2,18 @@ import projects from "../../data/projects";
 import ProjectComponent from "@/components/Project"
 import { Project } from "@/types";
 
+function sortProjects(projects: Project[]): Project[] {
+  return projects.sort((a, b) => b.lastModified.getTime() - a.lastModified.getTime());
+}
+
 function makeFeaturedProjectList(projects: Project[]): Project[] {
-  return projects.filter(project => project.isFeatured).sort((a, b) => b.lastModified.getTime() - a.lastModified.getTime());
+  const featuredProjects = projects.filter(project => project.isFeatured);
+  return sortProjects(featuredProjects);
+}
+
+function makeUnfeaturedProjectList(projects: Project[]): Project[] {
+  const unfeaturedProjects = projects.filter(project => !project.isFeatured);
+  return sortProjects(unfeaturedProjects);
 }
 
 export default function Index() {
@@ -19,6 +29,9 @@ export default function Index() {
         </section>
         <section>
             <h2>More...</h2>
+            <ol>
+              {makeUnfeaturedProjectList(projects).map(project => <ProjectComponent project={project}/>)}
+            </ol>
         </section>
       </main>
     )
