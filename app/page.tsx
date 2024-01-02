@@ -2,7 +2,7 @@ import Image from "next/image"
 import Experience from "../components/Experience"
 import { notableExperiences, educationalExperiences } from "../data/experiences";
 
-export default function Index() {
+export default function IndexPage() {
   return (
     // TODO: link skills with certifications to their certifications
     <main>

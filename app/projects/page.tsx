@@ -16,7 +16,7 @@ function makeUnfeaturedProjectList(projects: Project[]): Project[] {
   return sortProjects(unfeaturedProjects);
 }
 
-export default function Index() {
+export default function ProjectsPage() {
     const featuredProjects = makeFeaturedProjectList(projects);
     const unfeaturedProjects = makeUnfeaturedProjectList(projects);
     return (
