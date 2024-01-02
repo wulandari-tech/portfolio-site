@@ -1,5 +1,5 @@
 import projects from "../../data/projects";
-import ProjectComponent from "@/components/Project"
+import ProjectList from "@/components/ProjectList";
 import { Project } from "@/types";
 
 function sortProjects(projects: Project[]): Project[] {
@@ -23,16 +23,12 @@ export default function Index() {
         <h1>My Projects...</h1>
         <section>
             <h2>Featured...</h2>
-            <ol>
-              {makeFeaturedProjectList(projects).map(project => <ProjectComponent project={project}/>)}
-            </ol>
+            <ProjectList projectList={makeFeaturedProjectList(projects)}/>
         </section>
         <section>
             <h2>More...</h2>
-            <ol>
-              {makeUnfeaturedProjectList(projects).map(project => <ProjectComponent project={project}/>)}
-            </ol>
+            <ProjectList projectList={makeUnfeaturedProjectList(projects)}/>
         </section>
       </main>
-    )
+    );
   }
