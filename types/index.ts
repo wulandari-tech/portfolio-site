@@ -18,9 +18,3 @@ export interface Project {
     deploymentURL: string | null,
     projectImageSrc?: string,
 }
-
-// Things needed by open source projects that aren't in the above interface:
-// - URL to my PRs for the repo
-
-// Things in the above interface that aren't relevant to open source projects:
-// 
