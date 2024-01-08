@@ -1,12 +1,8 @@
 import ProjectComponent from "./Project";
-import { ProjectProps } from "@/types";
+import { OpenSourceProjectProps } from "@/types";
 
 function makePullRequestsURL(repoName: string, contributorUsername: string): string {
     return `https://github.com/${repoName}/pulls?q=is:pr+author:${contributorUsername}`;
-}
-
-interface OpenSourceProjectProps extends ProjectProps {
-    contributorUsername: string,
 }
 
 export default function OpenSourceProject({ project, contributorUsername }: OpenSourceProjectProps) {

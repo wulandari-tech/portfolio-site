@@ -1,3 +1,5 @@
+// TODO: consider whether it's best to have all types and interfaces in one file or if some would be better elsewhere
+
 export interface Experience {
     position: string,
     org: string,
@@ -21,4 +23,8 @@ export interface Project {
 
 export interface ProjectProps {
     project: Project,
+}
+
+export interface OpenSourceProjectProps extends ProjectProps {
+    contributorUsername: string,
 }
