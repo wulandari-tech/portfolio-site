@@ -3,6 +3,7 @@ import { Project } from "@/types";
 
 const openSourceProjects: Project[] = [
     {
+        // TODO: address the fact that the repoName and repoUrl here are redundant and the fact that this might be similar for the main personal project objects
         repoName: 'TheOdinProject/curriculum',
         repoUrl: 'https://github.com/TheOdinProject/curriculum',
         repoDescripion: 'The open curriculum for learning web development.',
