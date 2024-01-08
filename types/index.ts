@@ -18,3 +18,7 @@ export interface Project {
     deploymentURL: string | null,
     projectImageSrc?: string,
 }
+
+export interface ProjectProps {
+    project: Project,
+}

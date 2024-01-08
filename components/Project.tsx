@@ -1,9 +1,5 @@
-import { Project } from "@/types"
+import { Project, ProjectProps } from "@/types"
 import Image from "next/image";
-
-interface ProjectProps {
-    project: Project,
-}
 
 export default function Project({ project }: ProjectProps) {
     const { repoName, repoUrl, repoDescripion, languagesUsed, lastModified, deploymentURL, projectImageSrc } = project;
