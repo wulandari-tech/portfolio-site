@@ -1,9 +1,5 @@
 import Image from "next/image"
-import { Experience } from "@/types";
-
-interface ExperienceProps {
-    experience: Experience,
-}
+import { ExperienceProps } from "@/types";
 
 export default function Experience({ experience }: ExperienceProps) {
     const { position, org, orgSrc, startYear, endYear, description, skills } = experience;

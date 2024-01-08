@@ -1,9 +1,5 @@
 import ProjectComponent from "@/components/Project";
-import { Project } from "@/types";
-
-interface ProjectListProps {
-    projectList: Project[]
-}
+import { ProjectListProps } from "@/types";
 
 export default function ProjectList({ projectList }: ProjectListProps) {
     return (

@@ -10,6 +10,10 @@ export interface Experience {
     skills: string[],
 }
 
+export interface ExperienceProps {
+    experience: Experience,
+}
+
 export interface Project {
     repoName: string,
     repoUrl: string,
@@ -26,5 +30,14 @@ export interface ProjectProps {
 }
 
 export interface OpenSourceProjectProps extends ProjectProps {
+    contributorUsername: string,
+}
+
+export interface ProjectListProps {
+    projectList: Project[]
+}
+
+export interface OpenSourceProjectListProps {
+    projectList: Project[],
     contributorUsername: string,
 }
