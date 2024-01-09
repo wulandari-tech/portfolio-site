@@ -1,5 +1,4 @@
 import OpenSourceProject from "@/components/OpenSourceProject";
-// TODO: make sure links elsewhere use @ like below
 import openSourceProjects from "@/data/openSourceProjects";
 import OpenSourceProjectList from "@/components/OpenSourceProjectList";
 
