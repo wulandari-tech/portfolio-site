@@ -1,5 +1,4 @@
 import projects from "../../data/projects";
-import ProjectList from "@/components/ProjectList";
 import ProjectComponent from "@/components/Project";
 import List from "@/components/List";
 import { Project } from "@/types";

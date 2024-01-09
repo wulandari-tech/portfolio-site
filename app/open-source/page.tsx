@@ -1,7 +1,6 @@
 import List from "@/components/List";
 import OpenSourceProject from "@/components/OpenSourceProject";
 import openSourceProjects from "@/data/openSourceProjects";
-import OpenSourceProjectList from "@/components/OpenSourceProjectList";
 import { OpenSourceProjectProps } from "@/types";
 
 export default function OpenSourcePage() {
