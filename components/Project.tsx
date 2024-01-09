@@ -15,7 +15,7 @@ export default function Project({ project }: ProjectProps) {
                 {repoName}
             </p>
             <p>
-                Code: <a aria-label='Link to code (opens in new tab)' href={repoURL} target='_blank'>{deploymentURL}</a>
+                Code: <a aria-label='Link to code (opens in new tab)' href={repoURL} target='_blank'>{repoURL}</a>
             </p>
             {repoDescripion && <p>{repoDescripion}</p>}
             <p>
