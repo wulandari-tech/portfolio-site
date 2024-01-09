@@ -28,12 +28,10 @@ export default function ProjectsPage() {
         <section>
             <h2>Featured...</h2>
             <List dataList={featuredProjects.map(project => ({project}))} ListedComponent={ProjectComponent}/>
-            {/* <ProjectList projectList={featuredProjects}/> */}
         </section>
         <section>
             <h2>More...</h2>
             <List dataList={unfeaturedProjects.map(project => ({project}))} ListedComponent={ProjectComponent}/>
-            {/* <ProjectList projectList={unfeaturedProjects}/> */}
         </section>
       </main>
     );

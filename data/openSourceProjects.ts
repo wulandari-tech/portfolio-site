@@ -1,5 +1,4 @@
 import { Project } from "@/types";
-// import { OpenSourceProject } from "@/types";
 
 const openSourceProjects: Project[] = [
     {
