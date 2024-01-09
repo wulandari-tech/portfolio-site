@@ -1,4 +1,3 @@
-// TODO: sort out typing
 import React from "react"
 
 interface ListProps<T extends object> {
