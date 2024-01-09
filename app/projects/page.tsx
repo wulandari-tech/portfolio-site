@@ -1,5 +1,7 @@
 import projects from "../../data/projects";
 import ProjectList from "@/components/ProjectList";
+import ProjectComponent from "@/components/Project";
+import List from "@/components/List";
 import { Project } from "@/types";
 
 function sortProjects(projects: Project[]): Project[] {
@@ -26,11 +28,13 @@ export default function ProjectsPage() {
         {/* TODO: consider rendering each list only if there are relevant projects and amending their headings accordingly depending on which lists are rendered (e.g. shouldn't say "More..." if there's only one list), here and in the open source page for example */}
         <section>
             <h2>Featured...</h2>
-            <ProjectList projectList={featuredProjects}/>
+            <List dataList={featuredProjects.map(project => ({project}))} ListedComponent={ProjectComponent}/>
+            {/* <ProjectList projectList={featuredProjects}/> */}
         </section>
         <section>
             <h2>More...</h2>
-            <ProjectList projectList={unfeaturedProjects}/>
+            <List dataList={unfeaturedProjects.map(project => ({project}))} ListedComponent={ProjectComponent}/>
+            {/* <ProjectList projectList={unfeaturedProjects}/> */}
         </section>
       </main>
     );
