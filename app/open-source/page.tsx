@@ -5,7 +5,7 @@ import OpenSourceProjectList from "@/components/OpenSourceProjectList";
 import { OpenSourceProjectProps } from "@/types";
 
 export default function OpenSourcePage() {
-  const dataForList: OpenSourceProjectProps[] = openSourceProjects.map(project => ({project, contributorUsername: 'JamesGJ5'}));
+  const dataForList = openSourceProjects.map(project => ({project, contributorUsername: 'JamesGJ5'}));
   return (
     <main>
       <h1>My Open Source Contributions...</h1>
