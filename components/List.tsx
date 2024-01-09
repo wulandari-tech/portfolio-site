@@ -1,9 +1,5 @@
-import React from "react"
-
-interface ListProps<T extends object> {
-    dataList: T[],
-    ListedComponent: React.ComponentType<T>,
-}
+import React from "react";
+import { ListProps } from "@/types";
 
 export default function List<T extends object>({ dataList, ListedComponent }: ListProps<T>) {
     return (

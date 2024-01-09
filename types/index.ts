@@ -40,3 +40,8 @@ export interface OpenSourceProjectListProps {
     projectList: Project[],
     contributorUsername: string,
 }
+
+export interface ListProps<T extends object> {
+    dataList: T[],
+    ListedComponent: React.ComponentType<T>,
+}
