@@ -16,7 +16,6 @@ export interface ExperienceProps {
 
 export interface Project {
     repoName: string,
-    repoUrl: string,
     repoDescripion: string | null,
     isFeatured: boolean,
     languagesUsed: string[],

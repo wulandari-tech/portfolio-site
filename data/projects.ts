@@ -3,8 +3,7 @@ import { Project } from "@/types";
 
 const projects: Project[] = [
     {
-        repoName: 'letterboxd-guessing-game',
-        repoUrl: 'https://github.com/JamesGJ5/letterboxd-guessing-game',
+        repoName: 'JamesGJ5/letterboxd-guessing-game',
         repoDescripion: 'A full-stack game made using TypeScript, MongoDB, Express, React and NodeJS. It features WCAG Level A accessibility, responsive design using vanilla CSS and Material UI, a web scraper using Puppeteer, an authenticated RESTful API and full-stack testing with Jest.',
         isFeatured: true,
         languagesUsed: ['TypeScript', 'JavaScript', 'CSS', 'Dockerfile'],
@@ -12,8 +11,7 @@ const projects: Project[] = [
         deploymentURL: 'https://letterboxd-guessing-game.up.railway.app/',
     },
     {
-        repoName: 'yellowstone-permutation-integer-calculator',
-        repoUrl: 'https://github.com/JamesGJ5/yellowstone-permutation-integer-calculator',
+        repoName: 'JamesGJ5/yellowstone-permutation-integer-calculator',
         repoDescripion: 'A sequence calculator built using Python, AWS, vanilla JavaScript and HTML. It incorporates an AWS Lambda function written in Python, Amazon API Gateway, Amazon DynamoDB, Amazon IAM and AWS Amplify for hosting.',
         isFeatured: true,
         languagesUsed: ['Python', 'JavaScript', 'HTML', 'CSS'],
@@ -21,8 +19,7 @@ const projects: Project[] = [
         deploymentURL: 'https://main.d1xjk6ynccgx64.amplifyapp.com/',
     },
     {
-        repoName: 'binary-search-trees',
-        repoUrl: 'https://github.com/JamesGJ5/binary-search-trees',
+        repoName: 'JamesGJ5/binary-search-trees',
         repoDescripion: 'An object-oriented project I made in Node.js and JavaScript to learn more about binary search trees.',
         isFeatured: false,
         languagesUsed: ['JavaScript'],
@@ -30,8 +27,7 @@ const projects: Project[] = [
         deploymentURL: null,
     },
     {
-        repoName: 'admin-dashboard',
-        repoUrl: 'https://github.com/JamesGJ5/admin-dashboard',
+        repoName: 'JamesGJ5/admin-dashboard',
         repoDescripion: 'A static webpage made using HTML and CSS to learn to use CSS Grid.',
         isFeatured: false,
         languagesUsed: ['HTML', 'CSS'],
