@@ -1,4 +1,4 @@
-import projects from "../../data/projects";
+import projects from "@/data/projects";
 import Project from "@/components/Project";
 import List from "@/components/List";
 import { makeFeaturedProjectList, makeUnfeaturedProjectList } from "@/utils/projectUtils";

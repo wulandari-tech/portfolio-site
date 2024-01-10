@@ -1,6 +1,6 @@
 import Image from "next/image"
-import Experience from "../components/Experience"
-import { notableExperiences, educationalExperiences } from "../data/experiences";
+import Experience from "@/components/Experience"
+import { notableExperiences, educationalExperiences } from "@/data/experiences";
 import List from "@/components/List";
 
 export default function IndexPage() {
