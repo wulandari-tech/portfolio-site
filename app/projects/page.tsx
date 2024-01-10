@@ -10,7 +10,7 @@ export default function ProjectsPage() {
     // TODO: link skills to their certifications, here and in the open source page for example
     <main>
       <h1>My Projects...</h1>
-      {/* TODO: consider the below with similar constructions in the open source page */}
+      {/* TODO: consider refactoring the below with similar constructions in the open source page */}
       {featuredProjects.length > 0 && <section>
           <h2>Featured...</h2>
           <List dataList={featuredProjects.map(project => ({project}))} ListedComponent={Project}/>
