@@ -24,15 +24,14 @@ export default function ProjectsPage() {
       // TODO: link skills to their certifications, here and in the open source page for example
       <main>
         <h1>My Projects...</h1>
-        {/* TODO: consider rendering each list only if there are relevant projects and amending their headings accordingly depending on which lists are rendered (e.g. shouldn't say "More..." if there's only one list), here and in the open source page for example */}
-        <section>
+        {featuredProjects.length > 0 && <section>
             <h2>Featured...</h2>
             <List dataList={featuredProjects.map(project => ({project}))} ListedComponent={ProjectComponent}/>
-        </section>
-        <section>
-            <h2>More...</h2>
+        </section>}
+        {unfeaturedProjects.length > 0 && <section>
+            <h2>{featuredProjects.length ? 'More' : 'Featured'}...</h2>
             <List dataList={unfeaturedProjects.map(project => ({project}))} ListedComponent={ProjectComponent}/>
-        </section>
+        </section>}
       </main>
     );
   }
