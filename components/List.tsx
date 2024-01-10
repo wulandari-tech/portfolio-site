@@ -1,11 +1,11 @@
 import React from "react";
 import { ListProps } from "@/types";
+import { v4 as uuidv4 } from 'uuid';
 
 export default function List<T extends object>({ dataList, ListedComponent }: ListProps<T>) {
     return (
         <ol>
-            {/* TODO: use a more unique ID for key */}
-            {dataList.map((data, index) => <li key={index}>
+            {dataList.map(data => <li key={uuidv4()}>
                 <ListedComponent {...data}/>
             </li>)}
         </ol>
