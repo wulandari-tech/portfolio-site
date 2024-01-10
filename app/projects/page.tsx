@@ -1,21 +1,7 @@
 import projects from "../../data/projects";
 import ProjectComponent from "@/components/Project";
 import List from "@/components/List";
-import { Project } from "@/types";
-
-function sortProjects(projects: Project[]): Project[] {
-  return projects.sort((a, b) => b.lastModified.getTime() - a.lastModified.getTime());
-}
-
-function makeFeaturedProjectList(projects: Project[]): Project[] {
-  const featuredProjects = projects.filter(project => project.isFeatured);
-  return sortProjects(featuredProjects);
-}
-
-function makeUnfeaturedProjectList(projects: Project[]): Project[] {
-  const unfeaturedProjects = projects.filter(project => !project.isFeatured);
-  return sortProjects(unfeaturedProjects);
-}
+import { makeFeaturedProjectList, makeUnfeaturedProjectList } from "@/utils/projectUtils";
 
 export default function ProjectsPage() {
     const featuredProjects = makeFeaturedProjectList(projects);
