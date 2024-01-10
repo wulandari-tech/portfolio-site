@@ -8,6 +8,8 @@ export interface Experience {
     endYear?: number,
     description: string,
     skills: string[],
+    orgLinkedInUrl?: string,
+    orgHomePageUrl?: string,
 }
 
 export interface ExperienceProps {
