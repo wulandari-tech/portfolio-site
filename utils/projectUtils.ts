@@ -14,20 +14,28 @@ export function makeUnfeaturedProjectList(projects: Project[]): Project[] {
     return sortProjects(unfeaturedProjects);
 }
 
+async function fetchWithCheck(url: string): Promise<any> {
+    const res = await fetch(url);
+    if (!res.ok) {
+        throw new Error(`Error fetching data from ${url}: ${res.status}`);
+    }
+    return res;
+}
+
 async function getPortfolioRepos(gitHubUsername: string): Promise<GitHubRepo[]> {
-  const res = await fetch(`https://api.github.com/users/${gitHubUsername}/repos`);
+  const res = await fetchWithCheck(`https://api.github.com/users/${gitHubUsername}/repos`);
   const repos: GitHubRepo[] = await res.json();
   return repos.filter(repo => repo.topics.includes('for-portfolio'));
 }
 
 async function getLanguages(languagesUrl: string): Promise<string[]> {
-  const res = await fetch(languagesUrl);
+  const res = await fetchWithCheck(languagesUrl);
   const languageStats: RepoLanguageStats = await res.json();
   return Object.keys(languageStats);
 }
 
 async function getLastModificationDateTime(repoName: string, createdAt: string): Promise<Date> {
-    const res = await fetch(`https://api.github.com/repos/${repoName}/commits`);
+    const res = await fetchWithCheck(`https://api.github.com/repos/${repoName}/commits`);
     const commits: Commit[] = await res.json();
     return (commits.length > 0) ? new Date(commits[0].commit.author.date) : new Date(createdAt);
 }
@@ -46,6 +54,10 @@ async function makeProject(repo: GitHubRepo): Promise<Project> {
 }
 
 export async function getPortfolioProjects(gitHubUsername: string): Promise<Project[]> {
-  const portfolioRepos = await getPortfolioRepos(gitHubUsername);
-  return Promise.all(portfolioRepos.map(makeProject));
+    try {
+        const portfolioRepos = await getPortfolioRepos(gitHubUsername);
+        return Promise.all(portfolioRepos.map(makeProject));
+    } catch (error) {
+        console.error(`Fetch error: ${error}`);
+    }
 }
