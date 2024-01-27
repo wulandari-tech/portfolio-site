@@ -33,13 +33,12 @@ async function getLastModificationDateTime(repoName: string, createdAt: string):
 }
 
 async function makeProject(repo: GitHubRepo): Promise<Project> {
-  const isFeatured = repo.topics.includes('featured');
   const languagesUsed = await getLanguages(repo.languages_url);
   const lastModified = await getLastModificationDateTime(repo.full_name, repo.created_at);
   return {
     repoName: repo.full_name,
     repoDescripion: repo.description,
-    isFeatured,
+    isFeatured: repo.topics.includes('featured'),
     languagesUsed,
     lastModified,
     deploymentURL: repo.homepage,
