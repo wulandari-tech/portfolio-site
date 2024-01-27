@@ -22,12 +22,20 @@ export interface GitHubRepo {
     description: string | null,
     topics: string[],
     languages_url: string,
-    updated_at: string,
+    created_at: string,
     homepage: string | null,
 }
 
 export interface RepoLanguageStats {
     [language: string]: number,
+}
+
+export interface Commit {
+    commit: {
+        author: {
+            date: string,
+        },
+    },
 }
 
 // TODO: consider combining Project and GitHubRepo in some way
