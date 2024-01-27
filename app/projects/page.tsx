@@ -1,38 +1,7 @@
 // TODO: use Eslint to enforce things like consistent quotation marks
 import ProjectComponent from "@/components/Project";
 import List from "@/components/List";
-import { GitHubRepo, RepoLanguageStats, Project } from "@/types";
-import { makeFeaturedProjectList, makeUnfeaturedProjectList } from "@/utils/projectUtils";
-
-async function getPortfolioRepos(): Promise<GitHubRepo[]> {
-  const res = await fetch('https://api.github.com/users/JamesGJ5/repos');
-  const repos: GitHubRepo[] = await res.json();
-  return repos.filter(repo => repo.topics.includes('for-portfolio'));
-}
-
-async function getLanguages(languagesUrl: string): Promise<string[]> {
-  const res = await fetch(languagesUrl);
-  const languageStats: RepoLanguageStats = await res.json();
-  return Object.keys(languageStats);
-}
-
-async function makeProject(repo: GitHubRepo): Promise<Project> {
-  const isFeatured = repo.topics.includes('featured');
-  const languagesUsed = await getLanguages(repo.languages_url);
-  return {
-    repoName: repo.full_name,
-    repoDescripion: repo.description,
-    isFeatured,
-    languagesUsed,
-    lastModified: new Date(repo.updated_at),
-    deploymentURL: repo.homepage,
-  };
-}
-
-async function getPortfolioProjects(): Promise<Project[]> {
-  const portfolioRepos = await getPortfolioRepos();
-  return Promise.all(portfolioRepos.map(makeProject));
-}
+import { makeFeaturedProjectList, makeUnfeaturedProjectList, getPortfolioProjects } from "@/utils/projectUtils";
 
 export default async function ProjectsPage() {
   const projects = await getPortfolioProjects();
