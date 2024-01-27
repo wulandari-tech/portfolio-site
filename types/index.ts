@@ -1,4 +1,5 @@
 // TODO: consider whether it's best to have all types and interfaces in one file or if some would be better elsewhere
+// TODO: finalise which of the below should be types vs interfaces
 
 export interface Experience {
     position: string,
@@ -16,6 +17,20 @@ export interface ExperienceProps {
     experience: Experience,
 }
 
+export interface GitHubRepo {
+    full_name: string,
+    description: string | null,
+    topics: string[],
+    languages_url: string,
+    updated_at: string,
+    homepage: string | null,
+}
+
+export interface RepoLanguageStats {
+    [language: string]: number,
+}
+
+// TODO: consider combining Project and GitHubRepo in some way
 export interface Project {
     repoName: string,
     repoDescripion: string | null,
@@ -35,7 +50,7 @@ export interface OpenSourceProjectProps extends ProjectProps {
 }
 
 export interface ProjectListProps {
-    projectList: Project[]
+    projectList: Project[],
 }
 
 export interface OpenSourceProjectListProps {
