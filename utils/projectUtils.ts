@@ -53,11 +53,13 @@ async function makeProject(repo: GitHubRepo): Promise<Project> {
   };
 }
 
-export async function getPortfolioProjects(gitHubUsername: string): Promise<Project[]> {
+export async function getPortfolioProjects(gitHubUsername: string): Promise<Project[] | null> {
     try {
         const portfolioRepos = await getPortfolioRepos(gitHubUsername);
         return Promise.all(portfolioRepos.map(makeProject));
     } catch (error) {
         console.error(`Fetch error: ${error}`);
+        // TODO: consider replacing return of null and generic div in React component with error boundary
+        return null;
     }
 }
