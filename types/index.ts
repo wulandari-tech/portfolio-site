@@ -50,7 +50,7 @@ export interface Project {
 }
 
 export interface ProjectProps {
-    project: Project,
+    project: Omit<Project, 'lastModified'>,
 }
 
 export interface OpenSourceProjectProps extends ProjectProps {
