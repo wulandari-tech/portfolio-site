@@ -3,7 +3,7 @@
 export default function ErrorBoundary() {
     return (
         <p>
-            There may have been an issue retrieving my projects but feel free to contact me to find out more :D
+            Whoops! It looks like there may have been an issue loading my projects but follow the link in the navigation bar to my GitHub profile to discover more.
         </p>
     );
 }
