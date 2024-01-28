@@ -5,9 +5,6 @@ import { makeFeaturedProjectList, makeUnfeaturedProjectList, getPortfolioProject
 
 export default async function ProjectsPage() {
   const projects = await getPortfolioProjects('JamesGJ5');
-  if (!projects) {
-    return (<p>Sorry, no projects to be displayed right now...</p>);
-  }
   const featuredProjects = makeFeaturedProjectList(projects);
   const unfeaturedProjects = makeUnfeaturedProjectList(projects);
   return (
