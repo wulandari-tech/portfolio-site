@@ -1,7 +1,7 @@
 import List from "@/components/List";
+import { FeaturedUnfeaturedProps } from "@/types";
 
-// TODO: sort out typing
-export default function FeaturedUnfeatured({ featuredProps, unfeaturedProps, ListedComponent }) {
+export default function FeaturedUnfeatured<T extends object>({ featuredProps, unfeaturedProps, ListedComponent }: FeaturedUnfeaturedProps<T>) {
     return (
         <>
           {featuredProps.length > 0 && <section>
