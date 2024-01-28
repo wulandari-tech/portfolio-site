@@ -1,6 +1,6 @@
 // TODO: use Eslint to enforce things like consistent quotation marks and indentations
-import ProjectComponent from "@/components/Project";
-import List from "@/components/List";
+import Project from "@/components/Project";
+import FeaturedUnfeatured from "@/components/FeaturedUnfeatured";
 import { makeFeaturedProjectList, makeUnfeaturedProjectList, getPortfolioProjects } from "@/utils/projectUtils";
 
 export default async function ProjectsPage() {
@@ -11,15 +11,11 @@ export default async function ProjectsPage() {
     // TODO: link skills to their certifications, here and in the open source page for example
     <main>
       <h1>My Projects...</h1>
-      {/* TODO: consider refactoring the below with similar constructions in the open source page */}
-      {featuredProjects.length > 0 && <section>
-          <h2>Featured...</h2>
-          <List dataList={featuredProjects.map(project => ({project}))} ListedComponent={ProjectComponent}/>
-      </section>}
-      {unfeaturedProjects.length > 0 && <section>
-          <h2>{featuredProjects.length ? 'More' : 'Featured'}...</h2>
-          <List dataList={unfeaturedProjects.map(project => ({project}))} ListedComponent={ProjectComponent}/>
-      </section>}
+      <FeaturedUnfeatured
+        featuredProps={featuredProjects.map(project => ({project}))}
+        unfeaturedProps={unfeaturedProjects.map(project => ({project}))}
+        ListedComponent={Project}
+      />
     </main>
   );
 }

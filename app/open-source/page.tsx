@@ -1,5 +1,5 @@
-import List from "@/components/List";
 import OpenSourceProject from "@/components/OpenSourceProject";
+import FeaturedUnfeatured from "@/components/FeaturedUnfeatured";
 import openSourceProjects from "@/data/openSourceProjects";
 import { makeFeaturedProjectList, makeUnfeaturedProjectList } from "@/utils/projectUtils";
 
@@ -9,14 +9,11 @@ export default function OpenSourcePage() {
   return (
     <main>
       <h1>My Open Source Contributions...</h1>
-      {featuredProjects.length > 0 && <section>
-          <h2>Featured...</h2>
-          <List dataList={featuredProjects.map(project => ({project, contributorUsername: 'JamesGJ5'}))} ListedComponent={OpenSourceProject}/>
-      </section>}
-      {unfeaturedProjects.length > 0 && <section>
-          <h2>{featuredProjects.length ? 'More' : 'Featured'}...</h2>
-          <List dataList={unfeaturedProjects.map(project => ({project, contributorUsername: 'JamesGJ5'}))} ListedComponent={OpenSourceProject}/>
-      </section>}
+      <FeaturedUnfeatured
+        featuredProps={featuredProjects.map(project => ({project, contributorUsername: 'JamesGJ5'}))}
+        unfeaturedProps={unfeaturedProjects.map(project => ({project, contributorUsername: 'JamesGJ5'}))}
+        ListedComponent={OpenSourceProject}
+      />
     </main>
   );
 }
