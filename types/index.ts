@@ -71,7 +71,7 @@ export interface ListProps<T extends object> {
     ListedComponent: React.ComponentType<T>,
 }
 
-// TODO: consider making this extend ListProps in some way
+// TODO: consider making FeaturedUnfeaturedProps extend/compose ListProps but with two dataList keys rather than one
 export interface FeaturedUnfeaturedProps<T extends object> {
     featuredProps: T[],
     unfeaturedProps: T[],
