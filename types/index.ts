@@ -1,5 +1,6 @@
 // TODO: consider whether it's best to have all types and interfaces in one file or if some would be better elsewhere
 // TODO: finalise which of the below should be types vs interfaces
+// TODO: finalise type hierarchy
 
 export interface Experience {
     position: string,
@@ -59,6 +60,7 @@ export interface ProjectProps {
     project: Omit<Project, 'lastModified'>,
 }
 
+// TODO: consider having OpenSourceProjectProps extend ProjectProps in some way as OpenSourceProject renders Project
 export interface OpenSourceProjectProps {
     openSourceProject: OpenSourceProject,
 }
