@@ -10,7 +10,7 @@ export default function Project({ project }: ProjectProps) {
     const repoURL = makeRepoURL(repoName);
     return (
         // TODO: consider replacing the outer div with just <></> here and in similar components to make them more modular
-        <div>
+        <>
             <p>
                 {repoName}
             </p>
@@ -25,6 +25,6 @@ export default function Project({ project }: ProjectProps) {
                 Try at <a aria-label='Link to deployment (opens in new tab)' href={deploymentURL} target='_blank'>{deploymentURL}</a>
             </p>}
             {projectImageSrc && <Image src={projectImageSrc} alt='' width={50/96*98} height={50} />}
-        </div>
+        </>
     );
 }
