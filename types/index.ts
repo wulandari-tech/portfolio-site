@@ -49,12 +49,18 @@ export interface Project {
     projectImageSrc?: string,
 }
 
+export interface OpenSourceProject extends Omit<Project, 'lastModified'> {
+    contributions: {
+        [type: string]: string,
+    }
+}
+
 export interface ProjectProps {
     project: Omit<Project, 'lastModified'>,
 }
 
-export interface OpenSourceProjectProps extends ProjectProps {
-    contributorUsername: string,
+export interface OpenSourceProjectProps {
+    openSourceProject: OpenSourceProject,
 }
 
 export interface ProjectListProps {
