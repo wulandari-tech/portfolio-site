@@ -53,6 +53,13 @@ export interface PersonalProject extends Project {
     languagesUsed: string[],
 }
 
+export interface OpenSourceProject extends Project {
+    contributions: {
+        [type: string]: string, // URLs linking to contributions (e.g. issues, PRs etc.)
+    },
+    languagesUsed: string[],
+}
+
 export interface ProjectProps {
     project: Project,
 }
@@ -61,13 +68,6 @@ export interface PersonalProjectProps{
     personalProject: PersonalProject,
 }
 
-export interface OpenSourceProject extends Omit<Project, 'lastModified'> {
-    contributions: {
-        [type: string]: string,
-    }
-}
-
-// TODO: consider having OpenSourceProjectProps extend ProjectProps in some way as OpenSourceProject renders Project
 export interface OpenSourceProjectProps {
     openSourceProject: OpenSourceProject,
 }

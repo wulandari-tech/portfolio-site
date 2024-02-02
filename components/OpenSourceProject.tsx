@@ -1,5 +1,5 @@
 import React from "react";
-import ProjectComponent from "./Project";
+import Project from "./Project";
 import { OpenSourceProjectProps } from "@/types";
 
 function makeContributionElement(type: string, url: string): React.ReactElement {
@@ -7,10 +7,13 @@ function makeContributionElement(type: string, url: string): React.ReactElement 
 }
 
 export default function OpenSourceProject({ openSourceProject }: OpenSourceProjectProps) {
-    const contributions = openSourceProject.contributions;
+    const {contributions, languagesUsed, ...project} = openSourceProject;
     return (
         <>
-            <ProjectComponent project={openSourceProject}/>
+            <Project project={project}/>
+            <p>
+                {languagesUsed.join(', ')}
+            </p>
             <ul>
                 {Object.entries(contributions).map(([type, url]) => makeContributionElement(type, url))}
             </ul>
