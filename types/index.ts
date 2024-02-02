@@ -44,20 +44,27 @@ export interface Project {
     repoName: string,
     repoDescripion: string | null,
     isFeatured: boolean,
-    languagesUsed: string[],
-    lastModified: Date,
     deploymentURL: string | null,
     projectImageSrc?: string,
+}
+
+export interface PersonalProject extends Project {
+    lastModified: Date,
+    languagesUsed: string[],
+}
+
+export interface ProjectProps {
+    project: Project,
+}
+
+export interface PersonalProjectProps{
+    personalProject: PersonalProject,
 }
 
 export interface OpenSourceProject extends Omit<Project, 'lastModified'> {
     contributions: {
         [type: string]: string,
     }
-}
-
-export interface ProjectProps {
-    project: Omit<Project, 'lastModified'>,
 }
 
 // TODO: consider having OpenSourceProjectProps extend ProjectProps in some way as OpenSourceProject renders Project

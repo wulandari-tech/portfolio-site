@@ -1,10 +1,10 @@
 // TODO: use Eslint to enforce things like consistent quotation marks and indentations
 import Project from "@/components/Project";
 import FeaturedUnfeatured from "@/components/FeaturedUnfeatured";
-import { makeFeaturedProjectList, makeUnfeaturedProjectList, getPortfolioProjects } from "@/utils/projectUtils";
+import { makeFeaturedProjectList, makeUnfeaturedProjectList, getPersonalProjects } from "@/utils/projectUtils";
 
 export default async function ProjectsPage() {
-  const projects = await getPortfolioProjects('JamesGJ5');
+  const projects = await getPersonalProjects('JamesGJ5');
   const featuredProjects = makeFeaturedProjectList(projects);
   const unfeaturedProjects = makeUnfeaturedProjectList(projects);
   return (

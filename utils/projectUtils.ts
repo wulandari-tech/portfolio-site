@@ -1,15 +1,15 @@
-import { GitHubRepo, RepoLanguageStats, Commit, Project } from "@/types";
+import { GitHubRepo, RepoLanguageStats, Commit, PersonalProject } from "@/types";
 
-function sortProjects(projects: Project[]): Project[] {
+function sortProjects(projects: PersonalProject[]): PersonalProject[] {
     return projects.sort((a, b) => b.lastModified.getTime() - a.lastModified.getTime());
 }
   
-export function makeFeaturedProjectList(projects: Project[]): Project[] {
+export function makeFeaturedProjectList(projects: PersonalProject[]): PersonalProject[] {
     const featuredProjects = projects.filter(project => project.isFeatured);
     return sortProjects(featuredProjects);
 }
 
-export function makeUnfeaturedProjectList(projects: Project[]): Project[] {
+export function makeUnfeaturedProjectList(projects: PersonalProject[]): PersonalProject[] {
     const unfeaturedProjects = projects.filter(project => !project.isFeatured);
     return sortProjects(unfeaturedProjects);
 }
@@ -40,7 +40,7 @@ async function getLastModificationDateTime(repoName: string, createdAt: string):
     return (commits.length > 0) ? new Date(commits[0].commit.author.date) : new Date(createdAt);
 }
 
-async function makeProject(repo: GitHubRepo): Promise<Project> {
+async function makeProject(repo: GitHubRepo): Promise<PersonalProject> {
   const languagesUsed = await getLanguages(repo.languages_url);
   const lastModified = await getLastModificationDateTime(repo.full_name, repo.created_at);
   return {
@@ -53,7 +53,7 @@ async function makeProject(repo: GitHubRepo): Promise<Project> {
   };
 }
 
-export async function getPortfolioProjects(gitHubUsername: string): Promise<Project[]> {
+export async function getPersonalProjects(gitHubUsername: string): Promise<PersonalProject[]> {
     const portfolioRepos = await getPortfolioRepos(gitHubUsername);
     return Promise.all(portfolioRepos.map(makeProject));
 }
