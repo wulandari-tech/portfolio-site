@@ -77,6 +77,10 @@ export interface OpenSourceProjectProps {
     openSourceProject: OpenSourceProject,
 }
 
+export interface CertificationProps {
+    certification: Certification,   
+}
+
 export interface ProjectListProps {
     projectList: Project[],
 }
