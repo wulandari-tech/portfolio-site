@@ -1,6 +1,4 @@
-// TODO: consider whether it's best to have all types and interfaces in one file or if some would be better elsewhere
 // TODO: finalise which of the below should be types vs interfaces
-// TODO: finalise type hierarchy
 
 export interface Experience {
     position: string,
@@ -39,7 +37,6 @@ export interface Commit {
     },
 }
 
-// TODO: consider combining Project and GitHubRepo in some way
 export interface Project {
     repoName: string,
     repoDescripion: string | null,
@@ -58,6 +55,14 @@ export interface OpenSourceProject extends Project {
         [type: string]: string, // URLs linking to contributions (e.g. issues, PRs etc.)
     },
     languagesUsed: string[],
+}
+
+export interface Certification {
+    name: string,
+    issuer: string,
+    issueDate: Date,
+    credentialUrl: string,
+    credentialId: string,
 }
 
 export interface ProjectProps {
