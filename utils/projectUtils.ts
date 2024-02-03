@@ -55,8 +55,5 @@ async function makeProject(repo: GitHubRepo): Promise<PersonalProject> {
 
 export async function getPersonalProjects(gitHubUsername: string): Promise<PersonalProject[]> {
     const portfolioRepos = await getPortfolioRepos(gitHubUsername);
-    if (portfolioRepos.length === 0) {
-      throw new Error();
-    }
     return Promise.all(portfolioRepos.map(makeProject));
 }

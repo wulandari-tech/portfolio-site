@@ -5,6 +5,9 @@ import { makeFeaturedProjectList, makeUnfeaturedProjectList, getPersonalProjects
 
 export default async function ProjectsPage() {
   const projects = await getPersonalProjects('JamesGJ5');
+  if (projects.length === 0) {
+    throw new Error();
+  }
   const featuredProjects = makeFeaturedProjectList(projects);
   const unfeaturedProjects = makeUnfeaturedProjectList(projects);
   return (
