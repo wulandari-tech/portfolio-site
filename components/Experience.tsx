@@ -10,7 +10,7 @@ export default function Experience({ experience }: ExperienceProps) {
         dateSpanText += ` -- ${endYear}`;
     }
     return (
-        <div>
+        <>
             <p>
                 {position}
             </p>
@@ -33,6 +33,6 @@ export default function Experience({ experience }: ExperienceProps) {
             <p>
                 {skills.join(', ')}
             </p>
-        </div>
+        </>
     )
 }
