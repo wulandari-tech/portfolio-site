@@ -6,11 +6,15 @@ export default function FeaturedUnfeatured<T extends object>({ featuredProps, un
         <>
           {featuredProps.length > 0 && <section>
               <h2>Featured...</h2>
-              <List dataList={featuredProps} ListedComponent={ListedComponent}/>
+              <ol>
+                <List dataList={featuredProps} ListedComponent={ListedComponent}/>
+              </ol>
           </section>}
           {unfeaturedProps.length > 0 && <section>
               <h2>{unfeaturedProps.length ? 'More' : 'Featured'}...</h2>
-              <List dataList={unfeaturedProps} ListedComponent={ListedComponent}/>
+              <ol>
+                <List dataList={unfeaturedProps} ListedComponent={ListedComponent}/>
+              </ol>
           </section>}
         </>
       );

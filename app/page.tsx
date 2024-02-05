@@ -18,11 +18,15 @@ export default function IndexPage() {
       </section>
       <section>
         <h2>Notable Experience...</h2>
-        <List dataList={notableExperiences.map(experience => ({experience}))} ListedComponent={Experience}/>
+        <ol>
+          <List dataList={notableExperiences.map(experience => ({experience}))} ListedComponent={Experience}/>
+        </ol>
       </section>
       <section>
         <h2>Education...</h2>
-        <List dataList={educationalExperiences.map(experience => ({experience}))} ListedComponent={Experience}/>
+        <ol>
+          <List dataList={educationalExperiences.map(experience => ({experience}))} ListedComponent={Experience}/>
+        </ol>
       </section>
       <section>
         <h2>Further Knowledge and Skills...</h2>

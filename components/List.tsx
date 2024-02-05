@@ -4,10 +4,10 @@ import { v4 as uuidv4 } from 'uuid';
 
 export default function List<T extends object>({ dataList, ListedComponent }: ListProps<T>) {
     return (
-        <ol>
+        <>
             {dataList.map(data => <li key={uuidv4()}>
                 <ListedComponent {...data}/>
             </li>)}
-        </ol>
+        </>
     )
 }
