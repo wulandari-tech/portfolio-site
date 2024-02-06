@@ -16,7 +16,7 @@ export default async function ProjectsPage() {
       <h1>My Projects...</h1>
       <FeaturedUnfeatured
         featuredProps={featuredProjects.map(personalProject => ({ personalProject }))}
-        unfeaturedProps={unfeaturedProjects.map(personalProject => ({ personalProject  }))}
+        unfeaturedProps={unfeaturedProjects.map(personalProject => ({ personalProject }))}
         ListedComponent={PersonalProject}
       />
     </main>

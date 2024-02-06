@@ -4,6 +4,8 @@ import { certifications } from "@/data/certifications";
 
 export default function CertificationsPage() {
     return (
-        <List dataList={certifications.map(certification => ({certification}))} ListedComponent={Certification}/>
+        <ol>
+            <List dataList={certifications.map(certification => ({certification}))} ListedComponent={Certification}/>
+        </ol>
     );
 }
