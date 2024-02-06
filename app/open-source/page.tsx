@@ -9,8 +9,8 @@ export default function OpenSourcePage() {
     <main>
       <h1>My Open Source Contributions...</h1>
       <FeaturedUnfeatured
-        featuredProps={featuredOpenSourceProjects.map(project => ({openSourceProject: project}))}
-        unfeaturedProps={unfeaturedOpenSourceProjects.map(project => ({openSourceProject: project}))}
+        featuredProps={featuredOpenSourceProjects.map(project => ({ openSourceProject: project }))}
+        unfeaturedProps={unfeaturedOpenSourceProjects.map(project => ({ openSourceProject: project }))}
         ListedComponent={OpenSourceProject}
       />
     </main>

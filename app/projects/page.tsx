@@ -1,5 +1,5 @@
 // TODO: use Eslint to enforce things like consistent quotation marks and indentations
-import Project from "@/components/Project";
+import PersonalProject from "@/components/PersonalProject";
 import FeaturedUnfeatured from "@/components/FeaturedUnfeatured";
 import { makeFeaturedProjectList, makeUnfeaturedProjectList, getPersonalProjects } from "@/utils/projectUtils";
 
@@ -15,9 +15,9 @@ export default async function ProjectsPage() {
     <main>
       <h1>My Projects...</h1>
       <FeaturedUnfeatured
-        featuredProps={featuredProjects.map(project => ({project}))}
-        unfeaturedProps={unfeaturedProjects.map(project => ({project}))}
-        ListedComponent={Project}
+        featuredProps={featuredProjects.map(personalProject => ({ personalProject }))}
+        unfeaturedProps={unfeaturedProjects.map(personalProject => ({ personalProject  }))}
+        ListedComponent={PersonalProject}
       />
     </main>
   );
