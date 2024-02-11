@@ -20,7 +20,7 @@ export default function Project({ project }: ProjectProps) {
             {deploymentURL && <p>
                 Try at <a aria-label='Link to deployment (opens in new tab)' href={deploymentURL} target='_blank'>{deploymentURL}</a>
             </p>}
-            {projectImageSrc && <Image src={projectImageSrc} alt={`Logo of Project in ${repoName}`} width={50/96*98} height={50} />}
+            {projectImageSrc && <Image src={projectImageSrc} alt={`Image of Project in ${repoName}`} width={50/96*98} height={50} />}
         </>
     );
 }
