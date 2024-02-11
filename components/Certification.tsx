@@ -5,7 +5,7 @@ export default function Certification({ certification }: CertificationProps) {
     const { name, issuer, issueDate, credentialUrl, credentialId } = certification;
     return (
         <>
-            <p>{name}</p>
+            <h2>{name}</h2>
             <p>Issued by {issuer}</p>
             <p>Issued on {format(issueDate, 'yyyy-MM-dd')}</p>
             <p>Credential ID: {credentialId}</p>

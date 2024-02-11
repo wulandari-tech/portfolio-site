@@ -12,9 +12,9 @@ export default function Experience({ experience }: ExperienceProps) {
     }
     return (
         <>
-            <p>
+            <h3>
                 {position}
-            </p>
+            </h3>
             <p>
                 {org}
             </p>

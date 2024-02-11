@@ -10,9 +10,9 @@ export default function Project({ project }: ProjectProps) {
     const repoURL = makeRepoURL(repoName);
     return (
         <>
-            <p>
+            <h3>
                 {repoName}
-            </p>
+            </h3>
             <p>
                 Code: <a aria-label='Link to code (opens in new tab)' href={repoURL} target='_blank'>{repoURL}</a>
             </p>
