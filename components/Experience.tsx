@@ -24,7 +24,7 @@ export default function Experience({ experience }: ExperienceProps) {
             {orgLinkedInUrl && <p>
                 LinkedIn: <a href={orgLinkedInUrl}>{orgLinkedInUrl}</a>
             </p>}
-            {orgSrc && <Image src={orgSrc} alt='' width={50/96*98} height={50} />}
+            {orgSrc && <Image src={orgSrc} alt={`Logo of ${org}`} width={50/96*98} height={50} />}
             <p>
                 {dateSpanText}
             </p>

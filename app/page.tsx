@@ -13,7 +13,7 @@ export default function IndexPage() {
         <p>
           My name is <strong>James Graca-Jones</strong> and I am a <strong>software developer</strong> living in <strong>London</strong>.
         </p>
-        <Image src="/headshot.jpeg" alt="" width={50/96*98} height={50} priority/>
+        <Image src="/headshot.jpeg" alt="Head Shot of James Graca-Jones" width={50/96*98} height={50} priority/>
       </section>
       <section>
         <h2>Notable Experience...</h2>
