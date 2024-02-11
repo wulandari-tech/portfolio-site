@@ -9,7 +9,7 @@ export default function NavBar() {
                     <Link href={'/'}>Index</Link>
                 </li>
                 <li key={1}>
-                    <Link href={'/projects'}>Projects</Link>
+                    <Link href={'/personal-projects'}>Personal Projects</Link>
                 </li>
                 <li key={2}>
                     <Link href={'/open-source'}>Open Source</Link>

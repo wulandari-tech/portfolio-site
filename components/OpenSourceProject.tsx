@@ -1,5 +1,5 @@
 import React from "react";
-import Project from "./Project";
+import Project from "@/components/Project";
 import Skills from "@/components/Skills";
 import { OpenSourceProjectProps } from "@/types";
 

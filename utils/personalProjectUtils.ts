@@ -4,12 +4,12 @@ function sortProjects(projects: PersonalProject[]): PersonalProject[] {
     return projects.sort((a, b) => b.lastModified.getTime() - a.lastModified.getTime());
 }
   
-export function makeFeaturedProjectList(projects: PersonalProject[]): PersonalProject[] {
+export function makeFeaturedPersonalProjectList(projects: PersonalProject[]): PersonalProject[] {
     const featuredProjects = projects.filter(project => project.isFeatured);
     return sortProjects(featuredProjects);
 }
 
-export function makeUnfeaturedProjectList(projects: PersonalProject[]): PersonalProject[] {
+export function makeUnfeaturedPersonalProjectList(projects: PersonalProject[]): PersonalProject[] {
     const unfeaturedProjects = projects.filter(project => !project.isFeatured);
     return sortProjects(unfeaturedProjects);
 }
