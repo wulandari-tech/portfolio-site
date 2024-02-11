@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Experience from "@/components/Experience"
 import { notableExperiences, educationalExperiences } from "@/data/experiences";
-import List from "@/components/List";
+import ComponentList from "@/components/ComponentList";
 
 export default function IndexPage() {
   return (
@@ -19,13 +19,13 @@ export default function IndexPage() {
       <section>
         <h2>Notable Experience...</h2>
         <ol>
-          <List dataList={notableExperiences.map(experience => ({experience}))} ListedComponent={Experience}/>
+          <ComponentList dataList={notableExperiences.map(experience => ({experience}))} ListedComponent={Experience}/>
         </ol>
       </section>
       <section>
         <h2>Education...</h2>
         <ol>
-          <List dataList={educationalExperiences.map(experience => ({experience}))} ListedComponent={Experience}/>
+          <ComponentList dataList={educationalExperiences.map(experience => ({experience}))} ListedComponent={Experience}/>
         </ol>
       </section>
       <section>

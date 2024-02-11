@@ -90,7 +90,7 @@ export interface OpenSourceProjectListProps {
     contributorUsername: string,
 }
 
-export interface ListProps<T extends object> {
+export interface ComponentListProps<T extends object> {
     dataList: T[],
     ListedComponent: React.ComponentType<T>,
 }
