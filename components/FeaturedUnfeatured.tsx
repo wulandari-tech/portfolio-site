@@ -5,6 +5,7 @@ export default function FeaturedUnfeatured<T extends object>({ featuredProps, un
     return (
         <>
           {featuredProps.length > 0 && <section>
+            {/* TODO: consider making heading levels dynamic here and elsewhere */}
               <h2>Featured...</h2>
               <ol>
                 <List dataList={featuredProps} ListedComponent={ListedComponent}/>
