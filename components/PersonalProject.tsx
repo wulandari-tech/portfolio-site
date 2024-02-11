@@ -1,4 +1,5 @@
 import Project from "@/components/Project";
+import Skills from "@/components/Skills";
 import { PersonalProjectProps } from "@/types";
 
 export default function PersonalProject({ personalProject }: PersonalProjectProps) {
@@ -6,9 +7,7 @@ export default function PersonalProject({ personalProject }: PersonalProjectProp
     return (
         <>
             <Project project={project}/>
-            <p>
-                {languagesUsed.join(', ')}
-            </p>
+            <Skills skills={languagesUsed}/>
         </>
     );
 }

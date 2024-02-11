@@ -11,7 +11,6 @@ export default async function ProjectsPage() {
   const featuredProjects = makeFeaturedProjectList(projects);
   const unfeaturedProjects = makeUnfeaturedProjectList(projects);
   return (
-    // TODO: link skills to their certifications, here and in the open source page for example
     <main>
       <h1>My Projects...</h1>
       <FeaturedUnfeatured

@@ -2,6 +2,7 @@ import Image from "next/image"
 import Experience from "@/components/Experience"
 import { notableExperiences, educationalExperiences } from "@/data/experiences";
 import ComponentList from "@/components/ComponentList";
+import Skills from "@/components/Skills";
 
 export default function IndexPage() {
   return (
@@ -31,10 +32,9 @@ export default function IndexPage() {
       <section>
         <h2>Further Knowledge and Skills...</h2>
         {/* TODO: link skills below to projects in which they're used */}
-        {/* TODO: consider refactoring the below skills list with the skills lists in the Experience elements */}
-        <p>
-          {['AWS Identity and Access Management', 'AWS Lambda', 'Amazon DynamoDB', 'Amazon API Gateway', 'AWS Amplify', 'Docker', 'Material-UI', 'Web Scraping (Puppeteer)', 'Data Structures & Algorithms', 'Operating Systems', 'Networking', 'System Design'].join(', ')}
-        </p>
+        <Skills skills={
+          ['AWS Identity and Access Management', 'AWS Lambda', 'Amazon DynamoDB', 'Amazon API Gateway', 'AWS Amplify', 'Docker', 'Material-UI', 'Web Scraping (Puppeteer)', 'Data Structures & Algorithms', 'Operating Systems', 'Networking', 'System Design']
+        }/>
       </section>
     </main>
   )

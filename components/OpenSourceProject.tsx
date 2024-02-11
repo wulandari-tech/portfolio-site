@@ -1,5 +1,6 @@
 import React from "react";
 import Project from "./Project";
+import Skills from "@/components/Skills";
 import { OpenSourceProjectProps } from "@/types";
 
 function makeContributionElement(type: string, url: string): React.ReactElement {
@@ -11,9 +12,7 @@ export default function OpenSourceProject({ openSourceProject }: OpenSourceProje
     return (
         <>
             <Project project={project}/>
-            <p>
-                {languagesUsed.join(', ')}
-            </p>
+            <Skills skills={languagesUsed}/>
             <ul>
                 {Object.entries(contributions).map(([type, url]) => makeContributionElement(type, url))}
             </ul>

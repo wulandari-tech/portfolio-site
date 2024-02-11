@@ -1,5 +1,9 @@
 // TODO: finalise which of the below should be types vs interfaces
 
+export interface SkillsProps {
+    skills: string[],
+}
+
 export interface Experience {
     position: string,
     org: string,

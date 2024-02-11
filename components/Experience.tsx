@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Skills from "@/components/Skills";
 import { ExperienceProps } from "@/types";
 
 export default function Experience({ experience }: ExperienceProps) {
@@ -30,9 +31,7 @@ export default function Experience({ experience }: ExperienceProps) {
             <p>
                 {description}
             </p>
-            <p>
-                {skills.join(', ')}
-            </p>
+            <Skills skills={skills}/>
         </>
     )
 }
