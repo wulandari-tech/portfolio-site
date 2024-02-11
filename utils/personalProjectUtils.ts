@@ -45,5 +45,5 @@ export async function getPersonalProjects(gitHubUsername: string): Promise<Perso
 }
 
 export function sortPersonalProjects(projects: PersonalProject[]): PersonalProject[] {
-  return projects.sort((a, b) => b.lastModified.getTime() - a.lastModified.getTime());
+  return [...projects].sort((a, b) => b.lastModified.getTime() - a.lastModified.getTime());
 }

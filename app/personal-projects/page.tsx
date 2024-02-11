@@ -7,9 +7,9 @@ export default async function ProjectsPage() {
   if (personalProjects.length === 0) {
     throw new Error();
   }
-  sortPersonalProjects(personalProjects);
-  const featuredPersonalProjects = personalProjects.filter(project => project.isFeatured);
-  const unfeaturedPersonalProjects = personalProjects.filter(project => !project.isFeatured);
+  const sortedPersonalProjects = sortPersonalProjects(personalProjects);
+  const featuredPersonalProjects = sortedPersonalProjects.filter(project => project.isFeatured);
+  const unfeaturedPersonalProjects = sortedPersonalProjects.filter(project => !project.isFeatured);
   return (
     <main>
       <h1>My Personal Projects...</h1>
