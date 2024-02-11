@@ -8,3 +8,4 @@
 - Consider making FeaturedUnfeaturedProps extend/compose ListProps but with two dataList keys rather than one
 - Check at runtime that contributions (as in OpenSourceProject in types/index.ts) are URLs
 - When there are more Images, re-distribute priority tags
+- Give website an icon in tab
