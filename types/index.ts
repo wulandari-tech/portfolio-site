@@ -5,7 +5,7 @@ export interface SkillsProps {
 export interface Experience {
     position: string,
     org: string,
-    orgSrc?: string,
+    orgImageSrc?: string,
     startYear: number,
     endYear?: number,
     description: string,
@@ -65,6 +65,7 @@ export interface Certification {
     issueDate: Date,
     credentialUrl: string,
     credentialId: string,
+    certificationImageSrc?: string,
 }
 
 export interface ProjectProps {
