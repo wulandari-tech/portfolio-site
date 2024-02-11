@@ -1,19 +1,5 @@
 import { GitHubRepo, RepoLanguageStats, Commit, PersonalProject } from "@/types";
 
-function sortProjects(projects: PersonalProject[]): PersonalProject[] {
-    return projects.sort((a, b) => b.lastModified.getTime() - a.lastModified.getTime());
-}
-  
-export function makeFeaturedPersonalProjectList(projects: PersonalProject[]): PersonalProject[] {
-    const featuredProjects = projects.filter(project => project.isFeatured);
-    return sortProjects(featuredProjects);
-}
-
-export function makeUnfeaturedPersonalProjectList(projects: PersonalProject[]): PersonalProject[] {
-    const unfeaturedProjects = projects.filter(project => !project.isFeatured);
-    return sortProjects(unfeaturedProjects);
-}
-
 async function fetchWithCheck(url: string): Promise<any> {
     const res = await fetch(url);
     if (!res.ok) {
@@ -56,4 +42,8 @@ async function makeProject(repo: GitHubRepo): Promise<PersonalProject> {
 export async function getPersonalProjects(gitHubUsername: string): Promise<PersonalProject[]> {
     const portfolioRepos = await getPortfolioRepos(gitHubUsername);
     return Promise.all(portfolioRepos.map(makeProject));
+}
+
+export function sortPersonalProjects(projects: PersonalProject[]): PersonalProject[] {
+  return projects.sort((a, b) => b.lastModified.getTime() - a.lastModified.getTime());
 }

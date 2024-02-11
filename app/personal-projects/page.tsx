@@ -1,20 +1,21 @@
 import PersonalProject from "@/components/PersonalProject";
 import FeaturedUnfeatured from "@/components/FeaturedUnfeatured";
-import { makeFeaturedPersonalProjectList, makeUnfeaturedPersonalProjectList, getPersonalProjects } from "@/utils/personalProjectUtils";
+import { sortPersonalProjects, getPersonalProjects } from "@/utils/personalProjectUtils";
 
 export default async function ProjectsPage() {
-  const projects = await getPersonalProjects('JamesGJ5');
-  if (projects.length === 0) {
+  const personalProjects = await getPersonalProjects('JamesGJ5');
+  if (personalProjects.length === 0) {
     throw new Error();
   }
-  const featuredProjects = makeFeaturedPersonalProjectList(projects);
-  const unfeaturedProjects = makeUnfeaturedPersonalProjectList(projects);
+  sortPersonalProjects(personalProjects);
+  const featuredPersonalProjects = personalProjects.filter(project => project.isFeatured);
+  const unfeaturedPersonalProjects = personalProjects.filter(project => !project.isFeatured);
   return (
     <main>
       <h1>My Personal Projects...</h1>
       <FeaturedUnfeatured
-        featuredProps={featuredProjects.map(personalProject => ({ personalProject }))}
-        unfeaturedProps={unfeaturedProjects.map(personalProject => ({ personalProject }))}
+        featuredProps={featuredPersonalProjects.map(personalProject => ({ personalProject }))}
+        unfeaturedProps={unfeaturedPersonalProjects.map(personalProject => ({ personalProject }))}
         ListedComponent={PersonalProject}
       />
     </main>
