@@ -36,4 +36,4 @@ yarn-error.log*
 next-env.d.ts
 
 # markdown
-local-readme.md
+private-markdown.md

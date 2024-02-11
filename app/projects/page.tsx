@@ -1,4 +1,3 @@
-// TODO: use Eslint to enforce things like consistent quotation marks and indentations
 import PersonalProject from "@/components/PersonalProject";
 import FeaturedUnfeatured from "@/components/FeaturedUnfeatured";
 import { makeFeaturedProjectList, makeUnfeaturedProjectList, getPersonalProjects } from "@/utils/projectUtils";

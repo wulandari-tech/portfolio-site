@@ -1,5 +1,3 @@
-// TODO: finalise which of the below should be types vs interfaces
-
 export interface SkillsProps {
     skills: string[],
 }
@@ -99,7 +97,6 @@ export interface ComponentListProps<T extends object> {
     ListedComponent: React.ComponentType<T>,
 }
 
-// TODO: consider making FeaturedUnfeaturedProps extend/compose ListProps but with two dataList keys rather than one
 export interface FeaturedUnfeaturedProps<T extends object> {
     featuredProps: T[],
     unfeaturedProps: T[],
