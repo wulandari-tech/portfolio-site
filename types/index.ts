@@ -5,7 +5,7 @@ export interface SkillsProps {
 export interface Experience {
     position: string,
     org: string,
-    orgSrc?: string,
+    orgImageSrc?: string,
     startYear: number,
     endYear?: number,
     description: string,
