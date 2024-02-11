@@ -65,6 +65,7 @@ export interface Certification {
     issueDate: Date,
     credentialUrl: string,
     credentialId: string,
+    certificationImageSrc?: string,
 }
 
 export interface ProjectProps {
