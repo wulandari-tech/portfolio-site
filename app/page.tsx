@@ -11,7 +11,7 @@ export default function IndexPage() {
       <section>
         <h2>About me...</h2>
         <p>
-          My name is <strong>James Graca-Jones</strong> and I am a <strong>software developer</strong> living in <strong>London</strong>.
+          My name is James Graca-Jones and I am a software developer living in London.
         </p>
         <Image src="/headshot.jpeg" alt="Head Shot of James Graca-Jones" width={50/96*98} height={50} priority/>
       </section>
