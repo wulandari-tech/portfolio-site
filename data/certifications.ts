@@ -2,6 +2,12 @@ import { Certification } from "@/types";
 
 export const certifications: Certification[] = [
     {
+        name: 'Software Architecture Foundations',
+        issuer: 'LinkedIn',
+        issueDate: new Date('2024-02-18'),
+        credentialUrl: 'https://www.linkedin.com/learning/certificates/ae0f6bfc8a0dbc56b91b04a8022b1d382f6c5811625f64ebdffa3086bb164afd',
+    },
+    {
         name: 'MongoDB Atlas Search',
         issuer: 'MongoDB',
         issueDate: new Date('2023-03-01'),
