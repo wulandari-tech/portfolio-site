@@ -11,11 +11,8 @@ export default function Project({ project }: ProjectProps) {
     return (
         <>
             <h3>
-                {repoName}
+                <a aria-label='Link to code (opens in new tab)' href={repoURL} target='_blank'>{repoName}</a>
             </h3>
-            <p>
-                Code: <a aria-label='Link to code (opens in new tab)' href={repoURL} target='_blank'>{repoURL}</a>
-            </p>
             {repoDescripion && <p>{repoDescripion}</p>}
             {deploymentURL && <p>
                 Try at <a aria-label='Link to deployment (opens in new tab)' href={deploymentURL} target='_blank'>{deploymentURL}</a>
