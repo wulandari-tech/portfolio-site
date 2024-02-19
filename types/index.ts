@@ -64,7 +64,7 @@ export interface Certification {
     issuer: string,
     issueDate: Date,
     credentialUrl: string,
-    credentialId: string,
+    credentialId?: string,
     certificationImageSrc?: string,
 }
 
