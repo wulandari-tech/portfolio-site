@@ -2,6 +2,13 @@ import { Certification } from "@/types";
 
 export const certifications: Certification[] = [
     {
+        name: 'Networking Foundations: Networking Basics',
+        issuer: 'LinkedIn',
+        issueDate: new Date('2024-02-19'),
+        credentialUrl: 'https://www.linkedin.com/learning/certificates/27d996292efa10e30ccbac8916585c880c998f87ae88c4a7f855a6dca4a2d5a4',
+        credentialId: '27d996292efa10e30ccbac8916585c880c998f87ae88c4a7f855a6dca4a2d5a4',
+    },
+    {
         name: 'Software Architecture Foundations',
         issuer: 'LinkedIn',
         issueDate: new Date('2024-02-18'),
