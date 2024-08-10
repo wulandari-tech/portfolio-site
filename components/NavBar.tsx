@@ -6,7 +6,7 @@ export default function NavBar() {
         <nav>
             <ul>
                 <li key={0}>
-                    <Link href={'/'}>Index</Link>
+                    <Link href={'/'}>Home</Link>
                 </li>
                 <li key={1}>
                     <Link href={'/personal-projects'}>Personal Projects</Link>
