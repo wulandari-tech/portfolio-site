@@ -1,7 +1,6 @@
 import Image from "next/image"
 import Skills from "@/components/Skills";
 import { ExperienceProps } from "@/types";
-import ComponentList from "@/components/ComponentList";
 
 export default function Experience({ experience }: ExperienceProps) {
     const { position, org, orgImageSrc, startYear, endYear, descriptions, skills, orgLinkedInUrl, orgHomePageUrl } = experience;
