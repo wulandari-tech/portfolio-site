@@ -8,10 +8,24 @@ async function fetchWithCheck(url: string): Promise<any> {
     return res;
 }
 
+async function getAllRepos(gitHubUsername: string): Promise<GitHubRepo[]> {
+  const repos: GitHubRepo[] = [];
+  let pageNumber = 1;
+  while (true) {
+    const res = await fetchWithCheck(`https://api.github.com/users/${gitHubUsername}/repos?per_page=30&page=${pageNumber}`);
+    const reposOnThisPage = await res.json();
+    if (reposOnThisPage.length === 0) {
+      break;
+    }
+    repos.push(...reposOnThisPage);
+    pageNumber += 1;
+  }
+  return repos;
+}
+
 async function getPortfolioRepos(gitHubUsername: string): Promise<GitHubRepo[]> {
-  const res = await fetchWithCheck(`https://api.github.com/users/${gitHubUsername}/repos`);
-  const repos: GitHubRepo[] = await res.json();
-  return repos.filter(repo => repo.topics.includes('for-portfolio'));
+  const allRepos = await getAllRepos(gitHubUsername);
+  return allRepos.filter(repo => repo.topics.includes('for-portfolio'));
 }
 
 async function getLanguages(languagesUrl: string): Promise<string[]> {
