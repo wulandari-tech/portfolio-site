@@ -8,7 +8,7 @@ export interface Experience {
     orgImageSrc?: string,
     startYear: number,
     endYear?: number,
-    description: string,
+    descriptions: string[],
     skills: string[],
     orgLinkedInUrl?: string,
     orgHomePageUrl?: string,

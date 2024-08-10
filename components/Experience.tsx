@@ -1,9 +1,10 @@
 import Image from "next/image"
 import Skills from "@/components/Skills";
 import { ExperienceProps } from "@/types";
+import ComponentList from "@/components/ComponentList";
 
 export default function Experience({ experience }: ExperienceProps) {
-    const { position, org, orgImageSrc, startYear, endYear, description, skills, orgLinkedInUrl, orgHomePageUrl } = experience;
+    const { position, org, orgImageSrc, startYear, endYear, descriptions, skills, orgLinkedInUrl, orgHomePageUrl } = experience;
     let dateSpanText: string = String(startYear);
     if (!endYear) {
         dateSpanText += ` --`;
@@ -28,9 +29,9 @@ export default function Experience({ experience }: ExperienceProps) {
             <p>
                 {dateSpanText}
             </p>
-            <p>
-                {description}
-            </p>
+            <ul>
+                {descriptions.map(description => <p>{description}</p>)}
+            </ul>
             <Skills skills={skills}/>
         </>
     )
