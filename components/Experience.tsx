@@ -29,7 +29,7 @@ export default function Experience({ experience }: ExperienceProps) {
                 {dateSpanText}
             </p>
             <ul>
-                {descriptions.map(description => <p>{description}</p>)}
+                {descriptions.map((description, index) => <li key={index}>{description}</li>)}
             </ul>
             {skills && <Skills skills={skills}/>}
         </>
