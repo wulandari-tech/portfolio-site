@@ -11,7 +11,6 @@ export const notableExperiences: Experience[] = [
             'While trialing an in-house Node.js framework under tight deadlines, I used it to play a pivotal role in rapidly and successfully developing a demo product for Deutsche Bank.',
             'Assisted in engineering prompts to train a novel chatbot in structured investment products.'
         ],
-        skills: [], // TODO: remove
         orgLinkedInUrl: 'https://www.linkedin.com/company/wsdgroup',
         orgHomePageUrl: 'https://www.wsd.com/',
     },
@@ -25,7 +24,6 @@ export const notableExperiences: Experience[] = [
             'Refactored a data scraping pipeline featuring Python, Beautiful Soup, the OpenAI API and a PostgreSQL database, using Supabase and SQL to redesign the database’s schema and Prisma to modify the API accordingly.',
             'Ideated on the product and wrote detailed documentation about it for onboarding future hires.'
         ],
-        skills: [], // TODO: remove
         orgLinkedInUrl: 'https://www.linkedin.com/company/tocco/',
         orgHomePageUrl: 'https://tocco.earth/',
 
@@ -55,6 +53,5 @@ export const educationalExperiences: Experience[] = [
             'Built an ML pipeline with Git, Python, PyTorch, Linux, MPI, Matplotlib and an EfficientNet CNN for multi-output regression on microscopic images. Code: github.com/JamesGJ5/machine-learning-masters. Thesis: github.com/JamesGJ5/meng-thesis.',
             'Awarded student sponsorship by EDF Energy and a 2-year academic scholarship.'
         ],
-        skills: [], // TODO: remove
     },
 ];

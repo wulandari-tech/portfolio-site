@@ -31,7 +31,7 @@ export default function Experience({ experience }: ExperienceProps) {
             <ul>
                 {descriptions.map(description => <p>{description}</p>)}
             </ul>
-            <Skills skills={skills}/>
+            {skills && <Skills skills={skills}/>}
         </>
     )
 }

@@ -9,7 +9,7 @@ export interface Experience {
     startYear: number,
     endYear?: number,
     descriptions: string[],
-    skills: string[],
+    skills?: string[],
     orgLinkedInUrl?: string,
     orgHomePageUrl?: string,
 }
