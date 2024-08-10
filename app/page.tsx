@@ -11,7 +11,7 @@ export default function IndexPage() {
       <section>
         <h2>About me...</h2>
         <p>
-          My name is James Graca-Jones and I am a software developer living in London.
+        An Oxford MEng graduate with a deep interest in technology and finance. I have a year of work experience in providing financial legal software to the largest investment banks.
         </p>
         <Image src="/headshot.jpeg" alt="Head Shot of James Graca-Jones" width={50/96*98} height={50} priority/>
       </section>
