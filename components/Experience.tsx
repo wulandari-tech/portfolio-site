@@ -2,13 +2,17 @@ import Image from "next/image"
 import Skills from "@/components/Skills";
 import { ExperienceProps } from "@/types";
 
+function displayDate(date: Date) {
+    return date.toLocaleDateString('en-GB', {year: 'numeric', month: 'long'})
+}
+
 export default function Experience({ experience }: ExperienceProps) {
-    const { position, org, orgImageSrc, startYear, endYear, descriptions, skills, orgLinkedInUrl, orgHomePageUrl } = experience;
-    let dateSpanText: string = String(startYear);
-    if (!endYear) {
-        dateSpanText += ` --`;
-    } else if (endYear && endYear > startYear) {
-        dateSpanText += ` -- ${endYear}`;
+    const { position, org, orgImageSrc, startDate, endDate, descriptions, skills, orgLinkedInUrl, orgHomePageUrl } = experience;
+    let dateSpanText: string = displayDate(startDate);
+    if (endDate && endDate > startDate) {
+        dateSpanText += ` - ${displayDate(endDate)}`;
+    } else if (!endDate) {
+        dateSpanText += ` - Present`;
     }
     return (
         <>

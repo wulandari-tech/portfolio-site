@@ -4,8 +4,8 @@ export const notableExperiences: Experience[] = [
     {
         position: 'Technical Consultant',
         org: 'WSD',
-        startYear: 2023, // TODO: use months
-        endYear: 2024,
+        startDate: new Date(2023, 8),
+        endDate: new Date(2024, 7),
         descriptions: [
             'Programmed in PHP and JavaScript to automate the generation of legal documents for structured investment products for JP Morgan, Goldman Sachs, Bank of America, RBC, BBVA, RBI AG and Marex, collaborating with them in Jira and meetings.',
             'While trialing an in-house Node.js framework under tight deadlines, I used it to play a pivotal role in rapidly and successfully developing a demo product for Deutsche Bank.',
@@ -17,10 +17,10 @@ export const notableExperiences: Experience[] = [
     {
         position: 'Full Stack Web Developer',
         org: 'tocco',
-        startYear: 2023,
-        endYear: 2023,
+        startDate: new Date(2023, 7),
+        endDate: new Date (2023, 7),
         descriptions: [
-            'Used TypeScript at a pre-seed startup to help build an online marketplace for sustainable materials at tocco.earth.',
+            'Used TypeScript at a pre-seed startDateup to help build an online marketplace for sustainable materials at tocco.earth.',
             'Refactored a data scraping pipeline featuring Python, Beautiful Soup, the OpenAI API and a PostgreSQL database, using Supabase and SQL to redesign the database’s schema and Prisma to modify the API accordingly.',
             'Ideated on the product and wrote detailed documentation about it for onboarding future hires.'
         ],
@@ -31,8 +31,8 @@ export const notableExperiences: Experience[] = [
     {
         position: 'Student and Open Source Contributor',
         org: 'The Odin Project',
-        startYear: 2022,
-        endYear: 2023,
+        startDate: new Date(2022, 7),
+        endDate: new Date(2023, 7),
         descriptions: [
             'Learned full-stack web development in the MERN tech stack using an open educational curriculum–see github.com/JamesGJ5 for 30 projects through which I consolidated my learning.',
             'Made multiple contributions to enhance the curriculum. Example involving binary search trees: github.com/TheOdinProject/curriculum/pull/25540.'
@@ -47,8 +47,8 @@ export const educationalExperiences: Experience[] = [
     {
         position: 'MEng Materials Science Student',
         org: 'University of Oxford',
-        startYear: 2017,
-        endYear: 2022,
+        startDate: new Date(2017, 9),
+        endDate: new Date(2022, 6),
         descriptions: [
             'Built an ML pipeline with Git, Python, PyTorch, Linux, MPI, Matplotlib and an EfficientNet CNN for multi-output regression on microscopic images. Code: github.com/JamesGJ5/machine-learning-masters. Thesis: github.com/JamesGJ5/meng-thesis.',
             'Awarded student sponsorship by EDF Energy and a 2-year academic scholarship.'
